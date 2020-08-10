@@ -7,7 +7,7 @@ var gameState,readState;
 
 function preload(){
 sadDog=loadImage("images/Dog.png");
-happyDog=loadImage("images/happydog.png");
+happyDog=loadImage("images/Happy.png");
 garden=loadImage("images/Garden.png");
 washroom=loadImage("images/WashRoom.png");
 bedroom=loadImage("images/BedRoom.png");
@@ -69,7 +69,7 @@ function draw() {
    }else{
     feed.show();
     addFood.show();
-    dog.addImage(sadDog);
+    
    }
  
   drawSprites();
@@ -96,6 +96,7 @@ function feedDog(){
 
 //function to add food in stock
 function addFoods(){
+  
   foodS++;
   database.ref('/').update({
     Food:foodS
